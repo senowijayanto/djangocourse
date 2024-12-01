@@ -1497,6 +1497,30 @@ input[type="radio"]:focus {
   --tw-ring-color: rgb(16 185 129 / var(--tw-ring-opacity, 1));
 }
 
+.disabled\:cursor-not-allowed:disabled {
+  cursor: not-allowed;
+}
+
+.disabled\:opacity-5:disabled {
+  opacity: 0.05;
+}
+
+.disabled\:opacity-50:disabled {
+  opacity: 0.5;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .motion-safe\:animate-spin {
+    animation: spin 1s linear infinite;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:w-auto {
     width: auto;
@@ -1577,6 +1601,18 @@ input[type="radio"]:focus {
     font-size: 3.75rem;
     line-height: 1;
   }
+}
+
+.\[\&\>\.loading\.htmx-request\.hidden\]\:\!inline-block>.loading.htmx-request.hidden {
+  display: inline-block !important;
+}
+
+.\[\&\>\.loading\.htmx-request\.hidden\]\:\!inline>.loading.htmx-request.hidden {
+  display: inline !important;
+}
+
+.\[\&\>\.loading\.htmx-request\]\:hidden>.loading.htmx-request {
+  display: none;
 }
 
 .\[\&\>ul\]\:space-y-1>ul > :not([hidden]) ~ :not([hidden]) {
