@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load humanize %}
+
+{% block head_title %}
+	-  Your Articles
+{% endblock head_title %}
+
+{% block base_content %}
+<main class="max-w-7xl mx-auto mt-10 p-2 md:p-4 lg:p-10">
+    <h1 class="title mb-4">Welcome</h1>
+
+    <p class="text-xl mb-4">
+        You have created {{ user.article_count | intcomma }} article{{ user.article_count | pluralize }} and written {{ user.written_words | intcomma }} word{{ user.written_words | pluralize }}.
+    </p>
+
+    <a href="{% url 'create_article' %}" class="button primary inline-block mb-6 sm:w-auto text-center">Create new article</a>
+
+    <h2 class="subtitle mb-6">Your latest articles</h2>
+
+    {% if articles %}
+    <ul>
+        {% for article in articles %}
+            <li>
+                <a 
+                    class="text-2xl flex items-center"
+                    href="{% url 'update_article' pk=article.id %}">
+                    {{ article.title }}
+                    <span class="ml-2 px-4 py-0.5 text-xs rounded-sm uppercase article-status-{{ article.status }}">{{ article.status }}</span>
+                </a>
+                <p class="text-sm">{{ article.word_count }} word{{ article.word_count | pluralize }}.</p>
+            </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>There is no articles!</p>
+    {% endif %}
+</main>
+{% endblock base_content %}

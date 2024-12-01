@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "djangocourse"
+version = "0.1.0"
+description = ""
+authors = ["Seno Wijayanto <senowijayanto@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+django = "^5.1.3"
+django-allauth = {extras = ["socialaccount"], version = "^65.2.0"}
+psycopg = "^3.2.3"
+dj-database-url = "^2.3.0"
+django-widget-tweaks = "^1.5.0"
+
+
+[tool.poetry.group.dev.dependencies]
+django-debug-toolbar = "^4.4.6"
+django-browser-reload = "^1.17.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

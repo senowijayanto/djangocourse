@@ -1,0 +1,78 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Poetry-specific files
+.poetry/
+
+# Virtual environment created by Poetry
+# By default, Poetry creates virtual environments outside of the project directory.
+# Uncomment the line below if your virtual environment is created inside the project directory.
+# .venv/
+
+# Node.js
+node_modules/
+package-lock.json
+yarn.lock
+
+# Tailwind CSS
+*.css.map
+*.css.min.css
+public/css/
+
+# Django files
+*.log
+*.pot
+*.pyc
+db.sqlite3
+*.sqlite3-journal
+
+# Environment variables
+.env
+.env.docker
+*.env
+
+# Local settings
+settings_local.py
+
+# Media / Uploaded files
+media/
+uploads/
+
+# Static files (automatically generated)
+staticfiles/
+
+# pytest cache
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+*.cover
+*.py,cover
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
+
+# macOS and Linux system files
+.DS_Store
+.vscode/
+
+# Editor-specific files
+.idea/
+*.iml
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+
