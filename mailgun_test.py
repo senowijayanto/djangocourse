@@ -1,8 +1,9 @@
 import requests
+import os
 
-MAILGUN_API_KEY = "40d978913b67b768accb23322dabf7db-c02fd0ba-a6463f6c"
-MAILGUN_API_URL = "https://api.mailgun.net/v3/sandbox2589808390164319bdcaef2cf6459361.mailgun.org/messages"
-FROM_EMAIL_ADDRESS = "mailgun@sandbox2589808390164319bdcaef2cf6459361.mailgun.org"
+MAILGUN_API_KEY = os.getenv("MAILGUN_API_KEY", "None")
+MAILGUN_API_URL = os.getenv("MAILGUN_URL", "None")
+FROM_EMAIL_ADDRESS = os.getenv("MAILGUN_EMAIL", "None")
 
 def send_email(to_address: str, subject: str, body: str):
     resp = requests.post(
