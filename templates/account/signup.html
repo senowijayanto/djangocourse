@@ -24,7 +24,7 @@
                     <div class="p-6 lg:p-16">
                         <p class="text-xl font-semibold">Create your account</p>
                         <div class="mt-6">
-                            <form action="POST" class="space-y-6 mb-4">
+                            <form method="POST" class="space-y-6 mb-4">
                                 {% csrf_token %}
                                 <div>
                                     <label class="sr-only" for="{{ form.email.id_for_label }}">Email</label>
@@ -49,12 +49,6 @@
                                         </summary>
                                         <div class="px-2 py-1 mt-2 min-w-full [&>ul]:space-y-1 w-0">{{ form.password1.help_text | safe }}</div>
                                     </details>
-                                </div>
-                                <div>
-                                    <label class="sr-only" for="{{ form.password2.id_for_label }}">Password confirmation</label>
-                                    <div class="form-field">
-                                        {% render_field form.password2 class="block text-black shadow-sm focus:ring-emerald-500 focus:border-emerald-500 border-gray-300 text-sm" %}
-                                    </div>
                                 </div>
                                 <div>
                                     <p class="text-sm text-center">Already have an account? <a href="{% url 'account_login' %}" class="font-bold hover:underline">Sign in instead</a></p>

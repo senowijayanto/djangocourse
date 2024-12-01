@@ -1501,10 +1501,6 @@ input[type="radio"]:focus {
   cursor: not-allowed;
 }
 
-.disabled\:opacity-5:disabled {
-  opacity: 0.05;
-}
-
 .disabled\:opacity-50:disabled {
   opacity: 0.5;
 }
@@ -1605,10 +1601,6 @@ input[type="radio"]:focus {
 
 .\[\&\>\.loading\.htmx-request\.hidden\]\:\!inline-block>.loading.htmx-request.hidden {
   display: inline-block !important;
-}
-
-.\[\&\>\.loading\.htmx-request\.hidden\]\:\!inline>.loading.htmx-request.hidden {
-  display: inline !important;
 }
 
 .\[\&\>\.loading\.htmx-request\]\:hidden>.loading.htmx-request {
